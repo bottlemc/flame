@@ -1,0 +1,17 @@
+id = "flame"
+version = "0.1.0"
+namespace = "com.github.bottlemc.flame"
+
+[listeners]
+initialize = [
+    "FlameInitializeListener"
+]
+sheet = [
+    "FlameSheetListener"
+]
+
+[environment]
+    [environment.has]
+    client = "*"
+    sheet = ">=0.1.0"
+    sculpt = ">=0.2.0"

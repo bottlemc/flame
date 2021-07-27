@@ -18,6 +18,8 @@ plugins {
 apply plugin: 'kiln-standard'
 apply plugin: 'kiln-main'
 
+import static com.github.glassmc.kiln.standard.DependencyHandlerExtension.*
+
 sourceCompatibility = targetCompatibility = 1.8
 
 repositories {
@@ -28,5 +30,9 @@ repositories {
 }
 
 dependencies {
-    runtimeOnly 'com.github.glassmc:loader:v0.4.0'
+    runtimeOnly 'com.github.glassmc:loader:v0.4.2'
+
+    implementation 'com.github.glassmc:loader:v0.4.2'
+    implementation shard('sheet', '0.1.0')
+    implementation shard('sculpt', '0.2.0')
 }
